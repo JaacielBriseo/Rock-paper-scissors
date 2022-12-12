@@ -1,9 +1,11 @@
-import { Header } from './components/Header';
+import { GameTable, Header, RulesButton } from './components';
 
 export const MainApp = () => {
 	return (
-		<div>
+		<>
 			<Header />
-		</div>
+			<GameTable />
+			<RulesButton/>
+		</>
 	);
 };

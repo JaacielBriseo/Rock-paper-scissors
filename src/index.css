@@ -11,3 +11,6 @@ html {
 .headerLayout {
 	@apply flex justify-between w-3/4 h-20 mt-7 mx-auto p-3 rounded-lg border-[3px] border-HeaderOutline;
 }
+.gameTable {
+	@apply bg-Triangle bg-contain bg-no-repeat h-64 w-64 mx-auto mt-20 relative;
+}
