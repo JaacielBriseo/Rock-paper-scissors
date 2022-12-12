@@ -1,6 +1,9 @@
+import { Header } from './components/Header';
 
 export const MainApp = () => {
-  return (
-    <div>MainApp</div>
-  )
-}
+	return (
+		<div>
+			<Header />
+		</div>
+	);
+};

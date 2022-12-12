@@ -8,3 +8,6 @@ html {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.headerLayout {
+	@apply flex justify-between w-3/4 h-20 mt-7 mx-auto p-3 rounded-lg border-[3px] border-HeaderOutline;
+}
