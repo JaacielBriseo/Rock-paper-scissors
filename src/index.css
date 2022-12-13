@@ -17,3 +17,6 @@ html {
 .rulesButton {
 	@apply px-7 py-1 rounded-lg border text-white tracking-widest
 }
+.rulesModal {
+	@apply bg-white mx-auto h-screen flex flex-col items-center p-16 justify-between space-y-10
+}

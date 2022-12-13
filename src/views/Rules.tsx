@@ -9,7 +9,7 @@ export const Rules = ({ setIsRulesOpen, isRulesOpen }: Props) => {
 		setIsRulesOpen(!isRulesOpen);
 	};
 	return (
-		<div className='bg-white mx-auto h-screen flex flex-col items-center p-16 justify-between space-y-10'>
+		<div className='rulesModal'>
 			<h1 className='text-3xl'>RULES</h1>
 			<img src={RulesImg} alt='Rules' />
 			<button onClick={toggleRulesModal}>
