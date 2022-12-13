@@ -1,4 +1,9 @@
 import { GameContext } from './GameContext';
+
+export interface UserSelection {
+	isLoading:boolean;
+	userChoose:string;
+}
 interface Props {
 	children: JSX.Element | JSX.Element[];
 }
