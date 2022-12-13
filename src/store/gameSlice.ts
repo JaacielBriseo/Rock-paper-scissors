@@ -15,8 +15,11 @@ export const gameSlice = createSlice({
 		toggleIsRulesOpen: (state) => {
 			state.isRulesOpen = !state.isRulesOpen;
 		},
+		setUserChoose: (state,{payload}) => {
+			state.userChoose = payload
+		}
 	},
 });
 
 // Action creators are generated for each case reducer function
-export const { toggleIsRulesOpen } = gameSlice.actions;
+export const { toggleIsRulesOpen,setUserChoose } = gameSlice.actions;

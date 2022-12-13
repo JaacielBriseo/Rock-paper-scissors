@@ -1,9 +1,9 @@
 import { GameTable, Header, RulesButton } from './components';
-import { Rules } from './views';
+import { Rules, UserPick } from './views';
 import { useAppSelector } from './store/hookTypes';
 
 export const MainApp = () => {
-	const { isRulesOpen } = useAppSelector((state) => state.game);
+	const { isRulesOpen, userChoose } = useAppSelector((state) => state.game);
 	return (
 		<>
 			{isRulesOpen ? (
@@ -11,7 +11,8 @@ export const MainApp = () => {
 			) : (
 				<>
 					<Header />
-					<GameTable />
+					{userChoose !== '' ? <UserPick /> : <GameTable />}
+
 					<RulesButton />
 				</>
 			)}
