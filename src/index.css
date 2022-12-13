@@ -20,3 +20,6 @@ html {
 .rulesModal {
 	@apply bg-white mx-auto h-screen flex flex-col items-center p-16 justify-between space-y-10
 }
+.optionsBaseClass {
+	@apply absolute rounded-full ring-8 bg-white 
+}

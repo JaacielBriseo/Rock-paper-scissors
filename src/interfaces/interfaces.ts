@@ -3,5 +3,10 @@ export interface InitialValues {
 	userChoose: string;
 	isRulesOpen: boolean;
 	score: number;
-    result: undefined | 'win' | 'loose'
+	result: undefined | 'win' | 'loose';
+}
+export interface GameOptionProps {
+	customClassname: string;
+	img: string;
+	name: string;
 }
