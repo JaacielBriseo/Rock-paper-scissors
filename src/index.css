@@ -14,3 +14,6 @@ html {
 .gameTable {
 	@apply bg-Triangle bg-contain bg-no-repeat h-64 w-64 mx-auto mt-20 relative;
 }
+.rulesButton {
+	@apply px-7 py-1 rounded-lg border text-white tracking-widest
+}

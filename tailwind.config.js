@@ -8,6 +8,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				Triangle: 'url(assets/bg-triangle.svg)',
+				Rules: 'url(assets/image-rules.svg)',
 			},
 			colors: {
 				DarkText: 'hsl(229, 25%, 31%)',
