@@ -1,5 +1,6 @@
 export * from './ComputerPick'
 export * from './GameOption'
 export * from './Header'
+export * from './Result'
 export * from './RulesButton'
 export * from './UserPick'

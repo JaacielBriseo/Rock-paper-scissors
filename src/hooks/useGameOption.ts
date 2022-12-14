@@ -1,5 +1,5 @@
 import { gameOptions } from '../constants';
-import { setComputerChoose, setResult, setUserChoose, useAppDispatch, useAppSelector } from '../store';
+import { setComputerChoose, setResult, setScore, setUserChoose, useAppDispatch } from '../store';
 
 export const useGameOption = (img: string) => {
 	const dispatch = useAppDispatch();
@@ -15,6 +15,7 @@ export const useGameOption = (img: string) => {
 		setTimeout(() => {
 			dispatch(setComputerChoose(randomValue));
 			dispatch(setResult());
+			dispatch(setScore());
 		}, 1500);
 	};
 

@@ -45,8 +45,21 @@ export const gameSlice = createSlice({
 				state.result = 'you win';
 			}
 		},
+		setScore: (state: InitialValues) => {
+			if (state.result === 'you win') {
+				state.score += 1;
+			} else if (state.result === 'you lose') {
+				state.score = state.score - 1;
+			} else {
+				state.score = state.score;
+			}
+		},
+		playAgain: (state: InitialValues) => {
+			state = initialValues
+		},
 	},
 });
 
 // Action creators are generated for each case reducer function
-export const { toggleIsRulesOpen, setUserChoose, setComputerChoose, setResult } = gameSlice.actions;
+export const { toggleIsRulesOpen, setUserChoose, setComputerChoose, setResult, setScore, playAgain } =
+	gameSlice.actions;
