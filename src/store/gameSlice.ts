@@ -15,6 +15,7 @@ const initialValues: InitialValues = {
 		value: '',
 	},
 };
+
 export const gameSlice = createSlice({
 	name: 'game',
 	initialState: initialValues,
@@ -46,16 +47,13 @@ export const gameSlice = createSlice({
 			}
 		},
 		setScore: (state: InitialValues) => {
-			if (state.result === 'you win') {
-				state.score += 1;
-			} else if (state.result === 'you lose') {
-				state.score = state.score - 1;
-			} else {
-				state.score = state.score;
-			}
+			if (state.result === 'it"s a tie') return;
+			state.result === 'you win' ? (state.score += 1) : (state.score -= 1);
 		},
 		playAgain: (state: InitialValues) => {
-			state = initialValues
+			state.computerChoose = initialValues.computerChoose;
+			state.userChoose = initialValues.userChoose;
+			state.result = initialValues.result;
 		},
 	},
 });

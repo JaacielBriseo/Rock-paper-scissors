@@ -16,7 +16,7 @@ export const useGameOption = (img: string) => {
 			dispatch(setComputerChoose(randomValue));
 			dispatch(setResult());
 			dispatch(setScore());
-		}, 1500);
+		}, 3000);
 	};
 
 	return {
