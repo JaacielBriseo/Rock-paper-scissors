@@ -14,15 +14,18 @@ html {
 .gameTable {
 	@apply bg-Triangle bg-contain bg-no-repeat h-64 w-64 mx-auto mt-20 relative;
 }
-.userPick{
-	@apply w-64 h-64 mx-auto mt-20
+.gameStarted {
+	@apply w-64 h-64 mx-auto mt-20 flex justify-between text-white text-xs tracking-widest uppercase;
 }
 .rulesButton {
-	@apply px-7 py-1 rounded-lg border text-white tracking-widest
+	@apply px-7 py-1 rounded-lg border text-white tracking-widest;
 }
 .rulesModal {
-	@apply bg-white mx-auto h-screen flex flex-col items-center p-16 justify-between space-y-10
+	@apply bg-white mx-auto h-screen flex flex-col items-center p-16 justify-between space-y-10;
 }
 .optionsBaseClass {
-	@apply absolute rounded-full ring-8 bg-white 
+	@apply absolute rounded-full ring-8 bg-white;
+}
+.imgPick {
+	@apply w-20 h-20 p-5 rounded-full bg-white ring-8;
 }

@@ -1,6 +1,6 @@
-import { GameTable, Header, RulesButton } from './components';
-import { Rules, UserPick } from './views';
-import { useAppSelector } from './store/hookTypes';
+import { useAppSelector } from './store';
+import { Header, RulesButton } from './components';
+import { Rules, GameStarted, GameTable } from './views';
 
 export const MainApp = () => {
 	const { isRulesOpen, userChoose } = useAppSelector((state) => state.game);
@@ -11,8 +11,7 @@ export const MainApp = () => {
 			) : (
 				<>
 					<Header />
-					{userChoose !== '' ? <UserPick /> : <GameTable />}
-
+					{userChoose.value !== '' ? <GameStarted /> : <GameTable />}
 					<RulesButton />
 				</>
 			)}

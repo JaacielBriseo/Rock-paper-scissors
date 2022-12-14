@@ -1,12 +1,8 @@
 import { GameOptionProps } from '../interfaces';
-import { setUserChoose, useAppDispatch } from '../store';
+import { useGameOption } from '../hooks';
 
 export const GameOption = ({ customClassname, img, name }: GameOptionProps) => {
-	const dispatch = useAppDispatch();
-
-	const startGame = ({ currentTarget }: any) => {
-		dispatch(setUserChoose(currentTarget.name));
-	};
+	const { startGame } = useGameOption(img);
 
 	return (
 		<div className={`optionsBaseClass ${customClassname}`}>

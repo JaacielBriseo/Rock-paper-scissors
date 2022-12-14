@@ -1,5 +1,5 @@
 import { gameOptions } from '../constants';
-import { GameOption } from './';
+import { GameOption } from '../components';
 
 export const GameTable = () => {
 	const { paper, rock, scissors } = gameOptions;
