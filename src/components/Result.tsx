@@ -1,5 +1,4 @@
-import { playAgain, useAppSelector } from '../store';
-import { useAppDispatch } from '../store/hookTypes';
+import { playAgain, useAppSelector, useAppDispatch } from '../store';
 
 export const Result = () => {
 	const { result } = useAppSelector((state) => state.game);

@@ -1,5 +1,5 @@
 import { ComputerPickProps } from '../interfaces';
-import { useAppSelector } from '../store/hookTypes';
+import { useAppSelector } from '../store';
 
 export const ComputerPick = ({ computerChoose }: ComputerPickProps) => {
 	const { result } = useAppSelector((state) => state.game);
