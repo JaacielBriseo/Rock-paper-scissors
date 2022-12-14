@@ -28,8 +28,25 @@ export const gameSlice = createSlice({
 		setComputerChoose: (state: InitialValues, { payload }: { payload: InitialValues['computerChoose'] }) => {
 			state.computerChoose = payload;
 		},
+		setResult: (state: InitialValues) => {
+			if (state.computerChoose.name === state.userChoose.value) {
+				state.result = 'it"s a tie';
+			} else if (state.userChoose.value === 'Rock' && state.computerChoose.name === 'Scissor') {
+				state.result = 'you win';
+			} else if (state.userChoose.value === 'Rock' && state.computerChoose.name === 'Paper') {
+				state.result = 'you lose';
+			} else if (state.userChoose.value === 'Paper' && state.computerChoose.name === 'Scissor') {
+				state.result = 'you lose';
+			} else if (state.userChoose.value === 'Paper' && state.computerChoose.name === 'Rock') {
+				state.result = 'you win';
+			} else if (state.userChoose.value === 'Scissor' && state.computerChoose.name === 'Rock') {
+				state.result = 'you lose';
+			} else if (state.userChoose.value === 'Scissor' && state.computerChoose.name === 'Paper') {
+				state.result = 'you win';
+			}
+		},
 	},
 });
 
 // Action creators are generated for each case reducer function
-export const { toggleIsRulesOpen, setUserChoose, setComputerChoose } = gameSlice.actions;
+export const { toggleIsRulesOpen, setUserChoose, setComputerChoose, setResult } = gameSlice.actions;

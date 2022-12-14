@@ -1,11 +1,10 @@
 import { gameOptions } from '../constants';
-import { setComputerChoose, setUserChoose, useAppDispatch } from '../store';
+import { setComputerChoose, setResult, setUserChoose, useAppDispatch, useAppSelector } from '../store';
 
 export const useGameOption = (img: string) => {
 	const dispatch = useAppDispatch();
 	const values = Object.values(gameOptions);
 	const randomValue = values[Math.floor(Math.random() * values.length)];
-
 	const startGame = ({ currentTarget }: React.MouseEvent<HTMLButtonElement>) => {
 		dispatch(
 			setUserChoose({
@@ -15,6 +14,7 @@ export const useGameOption = (img: string) => {
 		);
 		setTimeout(() => {
 			dispatch(setComputerChoose(randomValue));
+			dispatch(setResult());
 		}, 1500);
 	};
 

@@ -10,7 +10,7 @@ export interface InitialValues {
 	};
 	isRulesOpen: boolean;
 	score: number;
-	result: undefined | 'win' | 'loose';
+	result: undefined | 'you win' | 'you lose' | 'it"s a tie';
 }
 export interface GameOptionProps {
 	customClassname: string;
