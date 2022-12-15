@@ -14,7 +14,7 @@ export const ComputerPick = ({ computerChoose }: ComputerPickProps) => {
 					} ${result === 'it"s a tie' && 'animate__animated animate__hinge animate__slower'}`}
 				/>
 			) : (
-				<span className='w-20 h-20 rounded-full bg-gray-800'></span>
+				<span className='w-20 h-20 rounded-full bg-gray-800 md:w-28 md:h-28'></span>
 			)}
 
 			<p>The house picked</p>

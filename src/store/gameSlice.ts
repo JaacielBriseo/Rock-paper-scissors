@@ -10,13 +10,12 @@ const initialValues: InitialValues = {
 	},
 	isRulesOpen: false,
 	result: undefined,
-	score: 0,
+	score: 0 | Number(localStorage.getItem('score')),
 	userChoose: {
 		img: '',
 		value: '',
 	},
 };
-
 export const gameSlice = createSlice({
 	name: 'game',
 	initialState: initialValues,
@@ -35,7 +34,7 @@ export const gameSlice = createSlice({
 		},
 		setScore: (state: InitialValues) => {
 			if (state.result === 'it"s a tie') return;
-			state.result === 'you win' ? (state.score += 1) : (state.score -= 1);
+			state.result === 'you win' ? (state.score += 1) : (state.score = Math.max(state.score - 1, 0));
 		},
 		playAgain: (state: InitialValues) => {
 			state.computerChoose = initialValues.computerChoose;

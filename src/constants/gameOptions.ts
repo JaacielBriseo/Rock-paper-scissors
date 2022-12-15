@@ -12,7 +12,7 @@ export const gameOptions = {
 		img: Scissors,
 	},
 	rock: {
-		customClassname: 'bottom-4 left-[85px] ring-RockRing',
+		customClassname: 'bottom-4 left-[85px] ring-RockRing md:left-[105px]',
 		name: 'Rock',
 		img: Rock,
 	},

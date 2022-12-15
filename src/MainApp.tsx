@@ -6,16 +6,13 @@ export const MainApp = () => {
 	const { isRulesOpen, userChoose, result } = useAppSelector((state) => state.game);
 	return (
 		<>
-			{isRulesOpen ? (
-				<Rules />
-			) : (
-				<div className='overflow-hidden'>
-					<Header />
-					{userChoose.value !== '' ? <GameStarted /> : <GameTable />}
-					{result && <Result />}
-					<RulesButton />
-				</div>
-			)}
+			{isRulesOpen && <Rules />}
+			<div className={`overflow-hidden ${isRulesOpen && 'brightness-50'}`}>
+				<Header />
+				{userChoose.value !== '' ? <GameStarted /> : <GameTable />}
+				{result && <Result />}
+			</div>
+			<RulesButton />
 		</>
 	);
 };
