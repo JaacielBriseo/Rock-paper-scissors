@@ -9,12 +9,12 @@ export const MainApp = () => {
 			{isRulesOpen ? (
 				<Rules />
 			) : (
-				<>
+				<div className='overflow-hidden'>
 					<Header />
 					{userChoose.value !== '' ? <GameStarted /> : <GameTable />}
 					{result && <Result />}
 					<RulesButton />
-				</>
+				</div>
 			)}
 		</>
 	);

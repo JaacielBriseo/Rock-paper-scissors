@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { determineResult } from '../helpers';
 import { InitialValues } from '../interfaces';
 
 const initialValues: InitialValues = {
@@ -30,21 +31,7 @@ export const gameSlice = createSlice({
 			state.computerChoose = payload;
 		},
 		setResult: (state: InitialValues) => {
-			if (state.computerChoose.name === state.userChoose.value) {
-				state.result = 'it"s a tie';
-			} else if (state.userChoose.value === 'Rock' && state.computerChoose.name === 'Scissor') {
-				state.result = 'you win';
-			} else if (state.userChoose.value === 'Rock' && state.computerChoose.name === 'Paper') {
-				state.result = 'you lose';
-			} else if (state.userChoose.value === 'Paper' && state.computerChoose.name === 'Scissor') {
-				state.result = 'you lose';
-			} else if (state.userChoose.value === 'Paper' && state.computerChoose.name === 'Rock') {
-				state.result = 'you win';
-			} else if (state.userChoose.value === 'Scissor' && state.computerChoose.name === 'Rock') {
-				state.result = 'you lose';
-			} else if (state.userChoose.value === 'Scissor' && state.computerChoose.name === 'Paper') {
-				state.result = 'you win';
-			}
+			state.result = determineResult(state.userChoose.value, state.computerChoose.name);
 		},
 		setScore: (state: InitialValues) => {
 			if (state.result === 'it"s a tie') return;
